@@ -1,0 +1,60 @@
+.FriendList {
+  display: flex;
+  max-width: 300px;
+}
+
+.FriendList__item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+
+  background-color: rgb(214, 214, 214);
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.FriendListItem-statusOnline {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+
+  border-radius: 50%;
+
+  composes: status;
+  background-color: #00ff557a;
+}
+
+.FriendListItem-statusOfline {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+
+  border-radius: 50%;
+
+  composes: status;
+  background-color: #ff00007a;
+}
+
+.FriendList__item-avatar {
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.FriendList__item-name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.offline {
+  composes: status;
+  background-color: #ce3b3b;
+}
+
+.online {
+  composes: status;
+  background-color: #278145;
+}
