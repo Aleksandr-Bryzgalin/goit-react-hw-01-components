@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 function FriendListItem({ avatar, name, isOnline }) {
   return (
     <li className="FriendList__item">
-      {isOnline ? (
-        <span className="FriendListItem-statusOnline">{isOnline}</span>
-      ) : (
-        <span className="FriendListItem-statusOfline">{isOnline}</span>
-      )}
-      <span className="FriendList__item-status">{isOnline}</span>
+      <span
+        className={
+          isOnline
+            ? 'FriendListItem-statusOnline'
+            : 'FriendListItem-statusOfline'
+        }
+      >
+        {isOnline}
+      </span>
       <img
         className="FriendList__item-avatar"
         src={avatar}
